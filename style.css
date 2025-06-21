@@ -1,0 +1,123 @@
+/** Import fonts **/
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap"); /* JURA */
+@import url("https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); /* Tomorrow */
+
+/** Varibles **/
+:root {
+  --main: #00ff00;
+  --main-transparent: #00ff0048;
+  --color: white;
+  --color2: #acacac;
+  --grid: #2c2c2c;
+}
+
+/** Style **/
+body {
+  --pixels: 75px;
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(to right, var(--grid) 1px, transparent 1px);
+  background-size: var(--pixels) var(--pixels);
+  background-color: #0a0a0a;
+  font-family: "Tomorrow";
+  animation: moveBackground 5s linear infinite;
+}
+
+/* Title */
+.titleContainer {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.titleContainer .title {
+  color: var(--color);
+  text-align: center;
+  font-size: 150px;
+  font-weight: 600;
+  margin: 0;
+  padding: 30px;
+  padding-bottom: 0;
+}
+
+.titleContainer .title .name {
+  display: inline;
+  color: var(--main);
+  background-color: var(--main-transparent);
+  padding: 20px;
+  letter-spacing: 20px;
+  border-radius: 4px;
+  border: 1px var(--main) solid;
+}
+
+.titleContainer h2 {
+  text-align: center;
+  color: var(--color2);
+  font-size: 40px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.scrolldownicon {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+
+  color: white;
+  background-color: var(#ffffff48);
+  border: 1px white solid;
+  border-radius: 50%;
+
+  size: 80px;
+  padding: 10px;
+  backdrop-filter: blur(1px);
+}
+/* About Me */
+#aboutMe h1 {
+  text-align: center;
+  color: var(--main);
+}
+
+#aboutMe .text {
+  text-align: center;
+  color: var(--color2);
+  border: 1px var(--main) solid;
+  margin: 20px;
+  backdrop-filter: blur(1px);
+  line-height: 1.6;
+  width: 50%;
+
+  position: absolute;
+    left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.bold {
+  font-weight: 600;
+  display: inline-block;
+  color: red;
+}
+
+/** Helper Section **/
+.material-symbols-rounded,
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+/** Animations **/
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: var(--pixels) var(--pixels);
+  }
+}
