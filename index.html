@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TFJ - Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="#home" class="logo">TFJ</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>I´m TFJ</h1>
+        <p class="subtitle">Also known TFJ_5183/TFJ2021</p>
+        <a class="cta-button">Scroll down</a>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about" class="section about-me fade-in">
+      <h2 class="section-title">About Me</h2>
+
+      <div style="padding-left: 30px; padding-right: 30px">
+        <!-- Quick word -->
+        <h3>Quick word</h3>
+
+        <p style="padding: 0; margin: 0">
+          <strong>WARNING:</strong> This user sometimes tells bad, nasty, and
+          racist jokes.
+        </p>
+        <p style="padding: 0; margin: 0">Don't take these seriously.</p>
+        <br />
+        <p>Having said that.</p>
+
+        <!-- My Journey -->
+        <h3>My Journey</h3>
+        <p>
+          After completing secondary school
+          <span class="secondary">
+            (
+            <span class="material-icons">translate</span>
+            Realschule)</span
+          >, I began training as an IT specialist for application development
+          <span class="secondary">
+            (
+            <span class="material-icons">translate</span>
+            Fachinformatiker für Anwendungsenticklung)</span
+          >
+          at <a href="https://www.sybit.de" target="_blank">SYBIT</a>.
+        </p>
+        <p>
+          My interest in programming started with a personal project: building a
+          Minecraft Varo plugin. Even though I never finished it, the experience
+          taught me valuable lessons and sparked my curiosity to explore other
+          ideas and technologies.
+        </p>
+        <div class="journey-highlights">
+          <div class="highlight-item">
+            <span class="highlight-number">To many</span>
+            <span class="highlight-label">Projects</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-number">2</span>
+            <span class="highlight-label">Years Learning</span>
+          </div>
+          <div class="highlight-item">
+            <span class="highlight-number">5+</span>
+            <span class="highlight-label">Technologies</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project section -->
+    <section id="projects" class="section">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-grid">
+        <a href="#" style="text-decoration: none" target="">
+          <div class="project-card fade-in">
+            <div class="project-image">
+              <span class="material-icons" style="font-size: 3rem">web</span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Personal Website</h3>
+              <p class="project-description">
+                A responsive personal website built with HTML, CSS, and
+                JavaScript featuring clean design and smooth animations.
+                <span class="secondary">(This one)</span>
+              </p>
+            </div>
+          </div>
+        </a>
+        <div class="project-card fade-in">
+          <div class="project-image">
+            <span class="material-icons" style="font-size: 3rem">chat</span>
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Chat-platform</h3>
+            <p class="project-description">
+              Krypton. The next gen-chat-platform.<br />
+              <span class="material-icons">construction</span>Still in
+              development
+            </p>
+          </div>
+        </div>
+        <a
+          href="https://github.com/TFJ2021/jsoner"
+          style="text-decoration: none"
+          target="_blank"
+        >
+          <div class="project-card fade-in" href="/index.html">
+            <div class="project-image">
+              <span class="material-icons" style="font-size: 3rem">
+                data_object
+              </span>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Jsoner</h3>
+              <p class="project-description">
+                An API to work with JSON like with the YAML package.
+                <span class="secondary"
+                  >(Sorry, naming things isn`t really my strength.)</span
+                >
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Skills section -->
+    <section id="skills" class="section skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="high">signal_cellular_alt</span>
+          </div>
+          <h4 class="skill-name">Java</h4>
+          <p class="skill-description">
+            with experience in JDA, Paper/Bukkit, and Spring Boot.
+          </p>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="middle"
+              >signal_cellular_alt_2_bar</span
+            >
+          </div>
+          <h4 class="skill-name">Website</h4>
+          <p class="skill-description">
+            Creating intermediate websites with HTML, CSS and/or Tailwind
+          </p>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="middle"
+              >signal_cellular_alt_2_bar</span
+            >
+          </div>
+          <h4 class="skill-name">Scripts</h4>
+          <p class="skill-description" style="padding-bottom: 10px">
+            Like TypeScript and JavaScript
+          </p>
+          <p class="skill-description">
+            If there´s a bug,<br />JavaScript is to blame
+          </p>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="low"
+              >signal_cellular_alt_1_bar</span
+            >
+          </div>
+          <h4 class="skill-name">Terminal & Linux</h4>
+          <p class="skill-description">
+            I’m a Linux
+            <span class="secondary"
+              >(<span class="material-icons">computer</span> Zorin OS)</span
+            >
+            user, and I use the console from time to time.
+          </p>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="low"
+              >signal_cellular_alt_1_bar</span
+            >
+          </div>
+          <h4 class="skill-name">Version control</h4>
+          <p class="skill-description">
+            Only familiar with Github. More will be comming soon
+          </p>
+        </div>
+        <div class="skill-item fade-in">
+          <div class="skill-icon">
+            <span class="material-icons" skill="info">book</span>
+          </div>
+          <h4 class="skill-name">Other stuff</h4>
+          <p class="skill-description">Currently learning react</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact setction -->
+    <section id="contact" class="section">
+      <h2 class="section-title">Social Platform</h2>
+      <div class="contact-content">
+        <div class="contact-intro">
+          <h3>Let's Connect</h3>
+          <p>I´m on following social platforms. Fell free to contact me</p>
+        </div>
+        <div class="social-platforms">
+          <a
+            href="https://github.com/TFJ2021"
+            class="platform-link"
+            target="_blank"
+          >
+            <div class="platform-icon">
+              <span class="material-icons">code</span>
+            </div>
+            <div class="platform-info">
+              <h4>GitHub</h4>
+              <h6>TFJ2021</h6>
+              <p>My bad code</p>
+            </div>
+          </a>
+          <a class="platform-link">
+            <div class="platform-icon">
+              <span class="material-icons">sports_esports</span>
+            </div>
+            <div class="platform-info">
+              <h4>Discord</h4>
+              <h6>tfj_5183</h6>
+              <p>Chat platform of trust</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://sybit.de" class="footer-social-link" target="_blank">
+          <span class="material-icons">work</span>
+        </a>
+        <a
+          href="https://github.com/TFJ2021/portfolio"
+          target="_blank"
+          class="footer-social-link"
+        >
+          <span class="material-icons">code</span>
+        </a>
+      </div>
+      <p>&copy; 2025 TFJ. MIT License</p>
+    </footer>
+
+    <script>
+      // Navigation functionality
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            document.querySelector(".nav-links").classList.remove("active");
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Mobile menu toggle
+      document
+        .querySelector(".mobile-menu")
+        .addEventListener("click", function () {
+          document.querySelector(".nav-links").classList.toggle("active");
+        });
+
+      // Fade in animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll(".fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>
