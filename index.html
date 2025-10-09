@@ -37,19 +37,19 @@
 <section id="home" class="hero">
     <div class="hero-content">
         <h1>I´m TFJ</h1>
-        <p class="subtitle">
+        <p class="subtitle fade-in">
             Welcome to my portfolio. I´m TFJ also known as TFJ2021/TFJ_5183,<br/>a
             developer focused on creating clean and user-friendly solutions.
         </p>
-        <a class="cta-button">Scroll down</a>
+        <a class="cta-button fade-in">Scroll down</a>
     </div>
 </section>
 
 <!-- About me -->
-<section id="about" class="section about-me fade-in">
+<section id="about" class="section fade-in">
     <h2 class="section-title">About Me</h2>
 
-    <div style="padding-left: 30px; padding-right: 30px">
+    <div class="about-me">
         <!-- Quick facts -->
         <h3>Quick facts</h3>
 
@@ -100,6 +100,12 @@
         <!-- My Journey -->
         <h3>My Journey</h3>
         <p>
+            My interest in programming started with a personal project: building a
+            Minecraft Varo plugin. Even though I never finished it, the experience
+            taught me valuable lessons and sparked my curiosity to explore other
+            ideas and technologies.
+        </p>
+        <p>
             After completing secondary school
             <span class="secondary">
             (
@@ -113,13 +119,7 @@
             >
             at <a href="https://www.sybit.de" target="_blank">SYBIT</a>.
         </p>
-        <p>
-            My interest in programming started with a personal project: building a
-            Minecraft Varo plugin. Even though I never finished it, the experience
-            taught me valuable lessons and sparked my curiosity to explore other
-            ideas and technologies.
-        </p>
-        <div class="journey-highlights">
+        <div class="journey-highlights fade-in">
             <div class="highlight-item">
                 <span class="highlight-number">Too many</span>
                 <span class="highlight-label">Projects</span>
@@ -146,10 +146,13 @@
                     <span class="material-icons" style="font-size: 3rem">browse</span>
                 </div>
                 <div class="project-content">
+                    <p class="project-languages">
+                        <span class="material-icons" style="padding-right: 1px">code</span> Vanilla HTML, CSS and
+                        Javascript
+                    </p>
                     <h3 class="project-title">Personal Website</h3>
                     <p class="project-description">
-                        A responsive personal website built with HTML, CSS, and
-                        JavaScript featuring clean design and smooth animations.
+                        Responsive portoflio website featuring much information's, clean design and smooth animations.
                         <span class="secondary">(This one)</span>
                     </p>
                 </div>
@@ -160,11 +163,17 @@
                 <span class="material-icons" style="font-size: 3rem">forum</span>
             </div>
             <div class="project-content">
+                <p class="project-languages">
+                    <span class="material-icons" style="padding-right: 1px">code</span> [FE] React, Tailwind [BE] Java,
+                    MongoDB
+                </p>
                 <h3 class="project-title">Chat-platform</h3>
                 <p class="project-description">
                     Krypton. The next gen-chat-platform.<br/>
-                    <span class="material-icons">construction</span>Still in
-                    development
+                </p>
+                <p class="project-description secondary">
+                    <span class="material-icons" style="padding-right: 1px">construction</span>
+                    Still in development
                 </p>
             </div>
         </div>
@@ -180,12 +189,33 @@
               </span>
                 </div>
                 <div class="project-content">
+                    <p class="project-languages">
+                        <span class="material-icons" style="padding-right: 1px">code</span> Java, GSON
+                    </p>
                     <h3 class="project-title">Jsoner</h3>
                     <p class="project-description">
                         An API to work with JSON like with the YAML package.
-                        <span class="secondary"
-                        >(Sorry, naming things isn`t really my strength.)</span
-                        >
+                        <span class="secondary">(Sorry, naming things isn`t really my strength.)</span>
+                    </p>
+                </div>
+            </div>
+        </a>
+        <a
+                href="https://github.com/Sybit-Education/azubi-game-challenge-2025"
+                style="text-decoration: none"
+                target="_blank"
+        >
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <span class="material-icons" style="font-size: 3rem">sports_esports</span>
+                </div>
+                <div class="project-content">
+                    <p class="project-languages">
+                        <span class="material-icons" style="padding-right: 1px">code</span> Phaser 3 with Typescript
+                    </p>
+                    <h3 class="project-title">Jump and Run</h3>
+                    <p class="project-description">
+                        A Christmas-themed jump and run game. To be fair, it was made in a group of five.
                     </p>
                 </div>
             </div>
@@ -200,6 +230,9 @@
                     <span class="material-icons" style="font-size: 3rem">deployed_code</span>
                 </div>
                 <div class="project-content">
+                    <p class="project-languages">
+                        <span class="material-icons" style="padding-right: 1px">code</span> Paper API
+                    </p>
                     <h3 class="project-title">Minecraft Parkour Plugin</h3>
                     <p class="project-description">
                         A simple Minecraft Paper Parkour plugin which I made for fun
@@ -267,6 +300,44 @@
     </div>
 </section>
 
+<!-- Favorite Songs section -->
+<section id="songs" class="section">
+    <h2 class="section-title">Favorite Songs</h2>
+    <div class="song-content">
+        <div class="songs-intro">
+            <p>
+                These are my favorite songs - they show both happiness and sadness.
+                <br>It's up to you which side you feel.
+            </p>
+        </div>
+
+        <div class="songs fade-in">
+            <a class="song" href="https://open.spotify.com/track/2H7F7EfsVhy0jNLsVz8MLH">
+                <img class="song-icon"
+                     src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e024ddf4df172bd6c51173989e9"
+                     alt="song image">
+
+                <div class="song-info">
+                    <h4>Paris</h4>
+                    <h6>Else</h6>
+                </div>
+            </a>
+
+            <a class="song" href="https://open.spotify.com/track/1A7qPfbcyRVEdcZiwTFhZI<">
+                <img class="song-icon"
+                     src="https://image-cdn-fa.spotifycdn.com/image/ab67616d00001e0242a71cca827a8d0abda07e49"
+                     alt="song image">
+
+                <div class="song-info">
+                    <h4>Memory Reboot</h4>
+                    <h6>VØJ, Narvent</h6>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
 <!-- Contact section -->
 <section id="contact" class="section">
     <h2 class="section-title">Social Platform</h2>
@@ -320,7 +391,9 @@
             <span class="material-icons">code</span>
         </a>
     </div>
-    <p>&copy; 2025 TFJ. MIT License</p>
+    <p><span class="material-icons">copyright</span> 2025 TFJ. MIT License</p>
+    <p class="secondary"><span class="material-icons" style="padding-right: 5px">update</span>Last update: 09.10.2025
+        [dd.mm.yyyy]</p>
 </footer>
 
 <script>

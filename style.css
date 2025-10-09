@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-/*  Simplified color scheme to primarily black and white with minimal accents */
+/* Variables */
 :root {
   --primary-bg: #000000;
   --secondary-bg: #111111;
@@ -16,13 +16,24 @@
   --highlight: #ffffff;
   --blur-bg: rgba(17, 17, 17, 0.9);
   --card-bg: rgba(26, 26, 26, 0.8);
-  --cyber-accent: lime;
-  --cyber-glow: rgba(0, 255, 0, 0.2);
-  --neon-border: rgba(0, 255, 0, 0.3);
+  --cyber-accent: red;
+  --cyber-glow: rgba(255, 0, 0, 0.2);
+  --neon-border: rgba(255, 0, 0, 0.3);
   --border-radius: 3px;
 }
 
-/* Make text unseclacble */
+/* Custom selection color */
+::-moz-selection {
+  color: var(--primary-bg);
+  background: var(--cyber-accent);
+}
+
+::selection {
+  color: var(--primary-bg);
+  background: var(--cyber-accent);
+}
+
+/* Make text unselectable */
 .material-icons,
 .prevent-select {
   -webkit-user-select: none; /* Safari */
@@ -35,37 +46,34 @@
   vertical-align: middle;
 }
 
-/* fallback */
 @font-face {
-    font-family: 'Material Symbols Rounded';
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v285/syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDJ_vb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rIelXxc.woff2) format('woff2');
+  font-family: 'Material Symbols Rounded';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialsymbolsrounded/v285/syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDJ_vb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rIelXxc.woff2) format('woff2');
 }
 
 .material-icons {
-    font-family: 'Material Symbols Rounded', serif;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -moz-font-feature-settings: 'liga';
-    -moz-osx-font-smoothing: grayscale;
+  font-family: 'Material Symbols Rounded', serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -moz-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale;
 }
-
 
 .secondary {
   opacity: 0.6;
 }
 
 body {
-  /*  Updated to Inter for better readability */
   font-family: "Inter", sans-serif;
   line-height: 1.6;
   color: var(--primary-text);
@@ -73,7 +81,62 @@ body {
   overflow-x: hidden;
 }
 
-/*  Simplified navigation with subtle cyberpunk elements */
+/* Section Styles */
+.section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 2rem;
+}
+
+.section-title {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  color: var(--primary-text);
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 1px;
+  background: var(--cyber-accent);
+}
+
+/* Logo */
+.logo {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--primary-text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  background: var(--cyber-accent);
+  box-shadow: 0 0 8px var(--cyber-glow);
+}
+
+.logo:hover {
+  color: var(--cyber-accent);
+}
+
+/* Navbar */
 .nav {
   position: fixed;
   top: 0;
@@ -96,33 +159,6 @@ body {
   align-items: center;
 }
 
-.logo {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--primary-text);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-/*  Added subtle geometric accent to logo */
-.logo::before {
-  content: "";
-  position: absolute;
-  left: -10px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 4px;
-  height: 4px;
-  background: var(--cyber-accent);
-  box-shadow: 0 0 8px var(--cyber-glow);
-}
-
-.logo:hover {
-  color: var(--cyber-accent);
-}
-
 .nav-links {
   display: flex;
   list-style: none;
@@ -136,14 +172,13 @@ body {
   font-size: 0.9rem;
   position: relative;
   transition: color 0.3s ease;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 .nav-links a:hover {
   color: var(--primary-text);
 }
 
-/*  Simplified hover effect */
 .nav-links a::after {
   content: "";
   position: absolute;
@@ -173,7 +208,7 @@ body {
   transition: 0.3s;
 }
 
-/*  Simplified hero section with geometric background pattern */
+/* Hero section */
 .hero {
   height: 100vh;
   display: flex;
@@ -193,17 +228,17 @@ body {
   right: 0;
   bottom: 0;
   background: linear-gradient(
-      90deg,
-      transparent 49%,
-      rgba(255, 255, 255, 0.02) 50%,
-      transparent 51%
-    ),
-    linear-gradient(
-      0deg,
-      transparent 49%,
-      rgba(255, 255, 255, 0.02) 50%,
-      transparent 51%
-    );
+          90deg,
+          transparent 49%,
+          rgba(255, 255, 255, 0.02) 50%,
+          transparent 51%
+  ),
+  linear-gradient(
+          0deg,
+          transparent 49%,
+          rgba(255, 255, 255, 0.02) 50%,
+          transparent 51%
+  );
   background-size: 100px 100px;
   opacity: 0.3;
 }
@@ -225,7 +260,6 @@ body {
   color: var(--primary-text);
 }
 
-/*  Added subtle accent to name */
 .hero h1::after {
   content: "_";
   color: var(--cyber-accent);
@@ -239,6 +273,7 @@ body {
   font-weight: 300;
 }
 
+/* Scroll-down "button" */
 .cta-button {
   display: inline-block;
   padding: 0.5rem 2rem;
@@ -249,7 +284,7 @@ body {
   border-radius: 4px;
   transition: all 0.3s ease;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   cursor: default;
 }
 
@@ -257,12 +292,12 @@ body {
   opacity: 0.8;
 }
 
-/*  Simplified "This is Me" section with cleaner design */
+/* About me section  */
 .about-me {
   background: var(--secondary-bg);
   position: relative;
-  padding-left: 600px;
-  border-radius: var(--border-radius);
+  padding: 100px;
+  border-radius: calc(var(--border-radius) * 2);
 }
 
 .about-me h3 {
@@ -274,8 +309,7 @@ body {
 }
 
 .about-me .fact {
-  padding: 0;
-  padding-left: 5px;
+  padding: 0 0 0 5px;
   margin: 0;
 }
 
@@ -291,7 +325,7 @@ body {
   text-decoration-color: var(--cyber-accent);
 }
 
-/*  Added subtle geometric accent to section title */
+/* Added subtle geometric accent to section title */
 .about-me h3::before {
   content: "";
   position: absolute;
@@ -311,7 +345,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/*  Simplified journey highlights for less experienced developer */
 .journey-highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -352,38 +385,7 @@ body {
   color: var(--secondary-text);
 }
 
-/* Section Styles */
-.section {
-  padding: 5rem 0;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.section-title {
-  font-family: "JetBrains Mono", monospace;
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
-  position: relative;
-  color: var(--primary-text);
-}
-
-/*  Simplified section title accent */
-.section-title::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 1px;
-  background: var(--cyber-accent);
-}
-
-/*  Simplified projects section */
+/* Projects section */
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -414,17 +416,29 @@ body {
   justify-content: center;
   font-size: 2.5rem;
   color: var(--secondary-text);
+  transition: all 0.3s ease;
 }
 
+.project-card:hover .project-image {
+  color: var(--cyber-accent);
+}
+
+
 .project-content {
-  padding: 1.5rem;
+  padding: 0.3rem 1.5rem 1.5rem;
+}
+
+.project-languages {
+  color: var(--accent-text);
+  font-size: 0.8rem;
+  margin-bottom: 0.9rem;
 }
 
 .project-title {
   font-family: "JetBrains Mono", monospace;
   font-size: 1.1rem;
   font-weight: 500;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
   color: var(--primary-text);
 }
 
@@ -434,7 +448,7 @@ body {
   font-size: 0.9rem;
 }
 
-/*  Simplified skills section */
+/* Skills section */
 .skills {
   background: var(--secondary-bg);
   border-radius: var(--border-radius);
@@ -448,7 +462,7 @@ body {
   position: relative;
 }
 
-/*  Added subtle geometric accent to section title */
+/* Added subtle geometric accent to section title */
 .skills h3::before {
   content: "";
   position: absolute;
@@ -534,7 +548,113 @@ body {
   line-height: 1.5;
 }
 
-/* Contact Section */
+/* Song section */
+.song-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.songs-intro {
+  text-align: center;
+  max-width: 600px;
+}
+
+.songs-intro h3 {
+  color: var(--primary-text);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
+}
+
+.songs-intro p {
+  color: var(--secondary-text);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.songs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.song {
+  display: flex;
+  align-items: center;
+  padding: 1.2rem;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--primary-text);
+  transition: all 0.3s ease;
+}
+
+.song:hover {
+  transform: translateY(-3px);
+  border-color: var(--neon-border);
+}
+
+.song:hover .platform-icon {
+  color: var(--cyber-accent);
+}
+
+.song-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--accent-bg);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-text);
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.song-info h4 {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.song-info h6 {
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding-left: 15px;
+  position: relative;
+}
+
+/* Added subtle geometric accent to section title */
+.song-info h6::before {
+  content: "";
+  position: absolute;
+  left: -0.5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: var(--accent-text);
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+.song-info p {
+  color: var(--secondary-text);
+  font-size: 0.8rem;
+}
+
+/* Contact section */
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -572,7 +692,7 @@ body {
 .platform-link {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1.2rem;
   background: var(--card-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--border-color);
@@ -592,8 +712,8 @@ body {
 }
 
 .platform-icon {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background: var(--accent-bg);
   border-radius: 4px;
   display: flex;
@@ -620,7 +740,7 @@ body {
   position: relative;
 }
 
-/*  Added subtle geometric accent to section title */
+/* Added subtle geometric accent to section title */
 .platform-info h6::before {
   content: "";
   position: absolute;
@@ -758,8 +878,6 @@ body {
   }
 
   .section {
-    padding: 3rem 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 3rem 1rem;
   }
 }
