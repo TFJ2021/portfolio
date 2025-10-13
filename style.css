@@ -880,4 +880,8 @@ body {
   .section {
     padding: 3rem 1rem;
   }
+
+  .about-me {
+      padding: 40px;
+  }
 }
