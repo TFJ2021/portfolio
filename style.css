@@ -249,6 +249,7 @@ body {
   animation: fadeInUp 1s ease;
   position: relative;
   z-index: 2;
+  cursor: default;
 }
 
 .hero h1 {
@@ -319,6 +320,7 @@ body {
 
 .about-me a {
   color: unset;
+  transition: 0.3s ease-in-out;
 }
 
 .about-me a:hover {
@@ -360,6 +362,7 @@ body {
   padding: 1.5rem;
   text-align: center;
   transition: all 0.3s ease;
+    cursor: default;
 }
 
 .highlight-item:hover {
@@ -494,6 +497,7 @@ body {
   border: 1px solid var(--border-color);
   border-radius: 8px;
   transition: all 0.3s ease;
+  cursor: default;
 }
 
 .skill-item:hover {
